@@ -4,6 +4,9 @@
   "description": "Example how to use Koa and TypeORM with TypeScript.",
   "license": "MIT",
   "readmeFilename": "README.md",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/index.ts"
+  },
   "author": {
     "name": "Umed Khudoiberdiev",
     "email": "pleerock.me@gmail.com"
@@ -28,6 +31,9 @@
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-router": "^7.0.27",
     "@types/node": "^9.6.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1",
     "typescript": "^2.8.1"
   },
   "dependencies": {
@@ -37,7 +43,10 @@
     "mysql": "^2.15.0",
     "typeorm": "^0.2.0"
   },
-  "scripts": {
-    "start": "tsc && node src/index.js"
+  
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

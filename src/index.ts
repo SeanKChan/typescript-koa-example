@@ -15,7 +15,7 @@ createConnection().then(async connection => {
     const router = new Router();
 
     // register all application routes
-    AppRoutes.forEach(route => router[route.method](route.path, route.action));
+    AppRoutes.forEach(route  => router[route.method] (route.path, route.action));
 
     // run app
     app.use(bodyParser());

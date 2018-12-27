@@ -12,7 +12,7 @@ export async function postSaveAction(context: Context) {
 
     // create a real post object from post json object sent over http
     const newPost = postRepository.create(context.request.body);
-
+    
     // save received post
     await postRepository.save(newPost);
 
